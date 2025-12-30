@@ -1,0 +1,161 @@
+---
+title: Quickstart Guide
+description: Get up and running with dato_igs1 by setting up your account and creating your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: A GitHub account for version control integration
+
+<Callout kind="info">
+
+dato_igs1 is a cloud-based documentation platform. No local installation required.
+
+</Callout>
+
+## Sign Up and Create Your First Project
+
+Follow these steps to register, log in, and set up your first documentation space.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+
+    Visit `https://app.dato_igs1.com/signup` and create your account.
+
+    <Tabs>
+      <Tab title="Email" icon="mail">
+
+        Enter your email and password, then verify your email address.
+
+      </Tab>
+      <Tab title="Google" icon="google">
+
+        Click "Sign up with Google" and authorize the app.
+
+      </Tab>
+    </Tabs>
+
+  </Step>
+
+  <Step title="Log In" icon="log-in">
+
+    Go to `https://app.dato_igs1.com/login` and sign in with your credentials.
+
+    Once logged in, you land on the dashboard.
+
+  </Step>
+
+  <Step title="Create New Documentation Project" icon="plus">
+
+    Click the "New Project" button in the top-right corner.
+
+    Enter a project name like "My First Docs" and select a template (e.g., "Blank Space").
+
+    Click "Create" to generate your documentation space.
+
+  </Step>
+
+  <Step title="Tour the Dashboard" icon="layout">
+
+    Explore key areas:
+
+    | Section       | Description                          |
+    |---------------|--------------------------------------|
+    | Projects      | List of your documentation spaces   |
+    | Documents     | Pages and files within the project   |
+    | Settings      | Project configuration and members    |
+    | Preview       | Live preview of your docs            |
+
+    Use the sidebar to navigate between sections.
+
+  </Step>
+
+  <Step title="Add Your First Document" icon="file-text">
+
+    In your project, click "New Document".
+
+    Name it "Introduction" and start editing in the MDX editor.
+
+    Here's a simple starter example:
+
+````mdx
+---
+title: Welcome
+description: Your first page.
+---
+
+## Hello World
+
+This is your first dato_igs1 document!
+````
+
+    Save and preview to see it live.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+Pro tip: Enable auto-save in settings to avoid losing work. Use keyboard shortcuts like `Ctrl+S` (`Cmd+S` on macOS) for quick saves.
+
+</Callout>
+
+## Dashboard Highlights
+
+Your dashboard provides quick access to essential tools.
+
+<Columns cols={3}>
+  <Card title="Project Overview" icon="bar-chart-3" href="/introduction">
+    View analytics and recent activity.
+  </Card>
+  <Card title="Document Editor" icon="edit-3" href="#">
+    Rich MDX editor with live preview.
+  </Card>
+  <Card title="Collaboration" icon="users" href="/authentication">
+    Invite team members and manage permissions.
+  </Card>
+</Columns>
+
+## Next Steps
+
+Now that your first project is live, dive deeper:
+
+- Customize themes and branding
+- Integrate with GitHub for version control
+- Set up custom domains
+
+Explore these resources:
+
+<CodeGroup tabs="CLI,REST API">
+````bash
+# Install dato_igs1 CLI
+npm install -g @dato_igs1/cli
+
+# Initialize a local project
+dato_igs1 init my-docs
+````
+````javascript
+// Fetch project list via API
+const response = await fetch('https://api.dato_igs1.com/projects', {
+  headers: {
+    Authorization: `Bearer ${YOUR_API_KEY}`
+  }
+});
+const projects = await response.json();
+console.log(projects);
+````
+</CodeGroup>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+
+- **Login fails?** Check your email verification status.
+- **Project not visible?** Refresh the dashboard or check permissions.
+- **Editor slow?** Ensure a stable internet connection.
+
+</Expandable>
+
+You're now ready to build comprehensive documentation with dato_igs1!

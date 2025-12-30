@@ -1,0 +1,149 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and new features released in dato_igs1.
+---
+
+## Recent Releases
+
+Stay informed about dato_igs1's evolution. You receive new features, performance improvements, and bug fixes with each release. Review the details below to understand changes and plan your updates.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- **Real-time Collaboration**: Enable multiple users to edit documentation simultaneously with live cursors and conflict resolution.
+- **Custom Themes**: Introduce brand color support (`#3B82F6` by default) and CSS variables for full theming control.
+
+## Improvements
+
+- Enhanced search performance by `>50%` using indexed full-text queries.
+- Added keyboard shortcuts like `<kbd>Ctrl</kbd>+<kbd>K</kbd>` for quick navigation.
+
+## Bug Fixes
+
+- Fixed rendering issues with nested `{code blocks}` in MDX files.
+- Resolved authentication token refresh loops in long sessions.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- **Version History**: Track changes to docs with diff views and rollback options.
+- **Embed Components**: Support `<Video>` and `<Iframe>` for richer media integration.
+
+## Improvements
+
+- Optimized image loading with lazy attributes and `width`/`height` props to prevent layout shifts.
+- Improved accessibility with ARIA labels on all interactive components.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Initial Release
+
+- Core MDX rendering engine with full component support.
+- Integrated frontmatter parsing and YAML validation.
+- Basic authentication via `YOUR_API_KEY`.
+
+## Breaking Changes
+
+- Removed legacy `<Mermaid>` component; use code blocks only.
+
+</Update>
+
+## Upcoming Features
+
+Get a preview of what's coming next to dato_igs1. These enhancements focus on developer experience and scalability.
+
+<Columns cols={3}>
+
+<Card title="AI-Powered Edits" icon="zap" href="#">
+
+Suggest improvements and auto-format your docs using AI.
+
+</Card>
+
+<Card title="Advanced Analytics" icon="bar-chart-3" href="#">
+
+Track doc views, engagement, and popular sections.
+
+</Card>
+
+<Card title="Plugin System" icon="puzzle" href="#">
+
+Extend functionality with community plugins.
+
+</Card>
+
+</Columns>
+
+## Migration Guide
+
+Follow these steps to upgrade dato_igs1 smoothly. Test in a staging environment first.
+
+<Callout kind="alert">
+
+Backup your project before migrating. Review breaking changes in each release.
+
+</Callout>
+
+<Steps>
+
+<Step title="Update Package" icon="download">
+
+````bash
+npm install dato_igs1@latest
+````
+
+Or use Yarn:
+
+````bash
+yarn add dato_igs1@latest
+````
+
+</Step>
+
+<Step title="Review Config" icon="settings">
+
+Check your `{config.json}` for deprecated options:
+
+<CodeGroup tabs="JSON,YAML">
+
+````json
+{
+  "theme": "custom",
+  "brandColor": "#3B82F6"
+}
+````
+
+````yaml
+theme: custom
+brandColor: "#3B82F6"
+````
+
+</CodeGroup>
+
+</Step>
+
+<Step title="Test Components" icon="play-circle">
+
+Verify `<Update>` tags and Mermaid diagrams render correctly.
+
+</Step>
+
+<Step title="Deploy" icon="rocket">
+
+Push to production and monitor for issues.
+
+</Step>
+
+</Steps>
+
+<Callout kind="tip">
+
+Subscribe to our RSS feed or GitHub notifications for instant release alerts. Join the community Discord for migration support.
+
+</Callout>
